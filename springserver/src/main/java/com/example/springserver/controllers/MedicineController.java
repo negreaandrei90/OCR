@@ -32,7 +32,7 @@ public class MedicineController {
     @ApiOperation("Get list of medicine matching text")
     @GetMapping("/filter/{partialName}")
     public ResponseEntity<List<Optional<Medicine>>> getMedicineByPartialName(@PathVariable String partialName){
-        List<Optional<Medicine>> medicine = medicineServiceImp.getMedicineByPartialName(partialName);
+        List<Optional<Medicine>> medicine = medicineServiceImp.getFiveMedicineByPartialName(partialName);
         if(!medicine.isEmpty()){
             return ResponseEntity.ok(medicine);
         } else {

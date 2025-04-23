@@ -18,14 +18,14 @@ public class EmailService {
         Content content = new Content("text/plain", "Please click the following link to verify your account: " + verificationLink);
         Mail mail = new Mail(sendFrom, subject, sendTo, content);
 
-        SendGrid sg = new SendGrid(SENDGRID_API_KEY);
+        //SendGrid sg = new SendGrid(SENDGRID_API_KEY);
         Request request = new Request();
 
         try {
             request.setMethod(Method.POST);
             request.setEndpoint("mail/send");
             request.setBody(mail.build());
-            Response response = sg.api(request);
+            //Response response = sg.api(request);
         } catch (IOException ex) {
             throw ex;
         }

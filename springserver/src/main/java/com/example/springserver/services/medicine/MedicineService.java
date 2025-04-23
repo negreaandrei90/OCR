@@ -7,5 +7,5 @@ import java.util.Optional;
 
 public interface MedicineService {
     public Optional<Medicine> getMedicineByName(String name);
-    public List<Optional<Medicine>> getMedicineByPartialName(String partialName);
+    public List<Optional<Medicine>> getFiveMedicineByPartialName(String partialName);
 }

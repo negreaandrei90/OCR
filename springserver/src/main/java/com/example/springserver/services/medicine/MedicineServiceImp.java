@@ -23,8 +23,8 @@ public class MedicineServiceImp implements MedicineService{
     }
 
     @Transactional
-    public List<Optional<Medicine>> getMedicineByPartialName(String partialName){
-        List<Optional<Medicine>> medicine = medicineRepository.findAllByNameContaining(partialName);
+    public List<Optional<Medicine>> getFiveMedicineByPartialName(String partialName){
+        List<Optional<Medicine>> medicine = medicineRepository.findFiveByNameContaining(partialName);
 
         return new ArrayList<>(medicine);
     }
